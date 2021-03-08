@@ -80,4 +80,12 @@ public class HpController {
 		return "/hp/shop/shop";
 	}
 	
+	@GetMapping("/insert")
+	public String insert() {
+		System.out.println("/hp/pages/insert get");
+		return "/hp/pages/insert";
+	}
+	
+	
+	
 }
