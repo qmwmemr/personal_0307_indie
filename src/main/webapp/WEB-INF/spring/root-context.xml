@@ -18,16 +18,17 @@
 		<constructor-arg ref="hikariConfig" />
 	</bean>
 	
-	<!-- MyBatis 핵심객체 SqlSessionFactory 빈 등록 
+	<!-- MyBatis 핵심객체 SqlSessionFactory 빈 등록 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="ds" />
 		<property name="mapperLocations" value="classpath:/mappers/**/*Mapper.xml" />
 	</bean>
-	-->
 	
-	<!-- 매퍼의 인터페이스를 스캔하는 설정 
-	<mybatis-spring:scan base-package="com.spring.mvc.board.repository"/>
-		-->
+	
+	<!-- 매퍼의 인터페이스를 스캔하는 설정--> 
+	<mybatis-spring:scan base-package="com.kjh.music.user.repository"/>
+	<mybatis-spring:scan base-package="com.kjh.music.board.repository"/>
+		
 </beans>
 
 

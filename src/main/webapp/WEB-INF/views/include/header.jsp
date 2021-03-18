@@ -12,7 +12,8 @@
 
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="manifest" href="site.webmanifest">
+<link rel="manifest" 
+	href="<c:url value='site.webmanifest'/>">
 <link rel="shortcut icon" type="image/x-icon"
 	href="<c:url value='/img/favicon.ico'/>">
 
@@ -52,34 +53,40 @@
 					<div class="menu-wrapper">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="home"><img src="<c:url value='/img/logo/logo.png'/>" alt=""></a>
+							<a href="/hp/home"><img src="<c:url value='/img/logo/logo.png'/>" alt=""></a>
 						</div>
 						<!-- Main-menu -->
 						<div class="main-menu d-none d-lg-block">
 							<nav>
 								<ul id="navigation">
-									<li><a href="home">Home</a></li>
-									<li><a href="shop">shop</a></li>
-									<li><a href="about">about</a></li>
+									<li><a href="/hp/home">Home</a></li>
+									<li><a href="/hp/shop">shop</a></li>
+									<li><a href="/hp/about">about</a></li>
 									<li class="hot"><a href="#">Latest</a>
 										<ul class="submenu">
-											<li><a href="shop"> Product list</a></li>
-											<li><a href="product_details"> Product Details</a></li>
+											<li><a href="/hp/shop"> Product list</a></li>
+											<li><a href="/hp/product_details"> Product Details</a></li>
 										</ul></li>
-									<li><a href="blog">Blog</a>
+									<li><a href="/hp/blog">Blog</a>
 										<ul class="submenu">
-											<li><a href="blog">Blog</a></li>
-											<li><a href="blog-details">Blog Details</a></li>
+											<li><a href="/hp/blog">Blog</a></li>
+											<li><a href="/hp/blog-details">Blog Details</a></li>
 										</ul></li>
 									<li><a href="#">Pages</a>
 										<ul class="submenu">
-											<li><a href="login">Login</a></li>
-											<li><a href="cart">Cart</a></li>
-											<li><a href="elements">Element</a></li>
-											<li><a href="confirmation">Confirmation</a></li>
-											<li><a href="checkout">Product Checkout</a></li>
+											<c:if test="${login == null }">
+											<li><a href="/hp/login">Login</a></li>
+											</c:if>
+											<c:if test="${login != null }">
+											<li><a href="/hp/myPage">MyPage</a></li>
+											<li><a href="/user/logout">Logout</a></li>
+											</c:if>
+											<li><a href="/board/list">Board</a></li>
+											<li><a href="/hp/elements">Element</a></li>
+											<li><a href="/hp/confirmation">Confirmation</a></li>
+											<li><a href="/hp/checkout">Product Checkout</a></li>
 										</ul></li>
-									<li><a href="contact">Contact</a></li>
+									<li><a href="/hp/contact">Contact</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -91,9 +98,14 @@
 										<span class="flaticon-search"></span>
 									</div>
 								</li>
-								<li><a href="login"><span class="flaticon-user"></span></a></li>
-								<li><a href="cart"><span
-										class="flaticon-shopping-cart"></span></a></li>
+								<c:if test="${login == null }">
+								<li><a href="/hp/login"><span class="flaticon-user"></span></a></li>
+								</c:if>
+								<c:if test="${login != null }">
+								<li><a href="/hp/myPage"><span class="flaticon-user"></span></a></li>
+								</c:if>
+								<li><a href="/board/list"><span
+										class="flaticon-heart"></span></a></li>
 							</ul>
 						</div>
 					</div>

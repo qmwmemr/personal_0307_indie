@@ -44,12 +44,6 @@ public class HpController {
 		return "/hp/latest/product_details";
 	}
 	
-	@GetMapping("/cart")
-	public String cart() {
-		System.out.println("/hp/pages/cart get");
-		return "/hp/pages/cart";
-	}
-	
 	@GetMapping("/checkout")
 	public String checkout() {
 		System.out.println("/hp/pages/checkout get");
@@ -86,6 +80,17 @@ public class HpController {
 		return "/hp/pages/insert";
 	}
 	
+	@GetMapping("/signUp")
+	public String signUp() {
+		System.out.println("/hp/pages/signUp get");
+		return "hp/pages/signUp";
+	}
+	
+	@GetMapping("/myPage")
+	public String myPage() {
+		System.out.println("/hp/pages/myPage get");
+		return "hp/pages/myPage";
+	}
 	
 	
 }
