@@ -52,7 +52,7 @@
                                     
                                     <div class="col-md-12 form-group">
                                         <div class="creat_account d-flex align-items-center">
-                                            <input type="checkbox" id="f-option" name="selector">
+                                            <input type="checkbox" id="auto-login" name="auto-login">
                                             <label for="f-option">Remember me</label>
                                         </div>
                                         <button type="submit" value="submit" class="btn_3" id="login-btn">
@@ -126,10 +126,16 @@ $(function(){
 		//if(chk1 && chk2){
 			const id = $("#user_id").val();
 			const pw = $("#user_pw").val();
+			//is()함수는 상태여부를 판단하여 논리값을 리턴합니다
+			const autoLogin = $("#auto-login").is(":checked");
+
+			console.log("auto : " + autoLogin);
+			
 			
 			const userInfo = {
 					user_id : id,
-					user_pw : pw
+					user_pw : pw,
+					autoLogin : autoLogin
 			};
 			
 			$.ajax({
@@ -177,6 +183,13 @@ $(function(){
 	
 	
 });//jquery end
+
+
+	//게시판 글쓰기 로그인 필요
+	const msg = "${msg}";
+	if(msg == "not-login"){
+		alert("로그인이 필요한 서비스입니다.");
+	}
 
 
 </script>

@@ -39,7 +39,7 @@
 			<div class="preloader-inner position-relative">
 				<div class="preloader-circle"></div>
 				<div class="preloader-img pere-text">
-					<img src="<c:url value='/img/logo/logo.png'/>" alt="">
+					<img src="<c:url value='/img/logo/logo2.png'/>" alt="">
 				</div>
 			</div>
 		</div>
@@ -53,7 +53,7 @@
 					<div class="menu-wrapper">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="/hp/home"><img src="<c:url value='/img/logo/logo.png'/>" alt=""></a>
+							<a href="/hp/home"><img src="<c:url value='/img/logo/logo2.png'/>" alt=""></a>
 						</div>
 						<!-- Main-menu -->
 						<div class="main-menu d-none d-lg-block">
