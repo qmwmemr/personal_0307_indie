@@ -28,6 +28,8 @@
 	<!-- 매퍼의 인터페이스를 스캔하는 설정--> 
 	<mybatis-spring:scan base-package="com.kjh.music.user.repository"/>
 	<mybatis-spring:scan base-package="com.kjh.music.board.repository"/>
+	<mybatis-spring:scan base-package="com.kjh.music.like.repository"/>
+	<mybatis-spring:scan base-package="com.kjh.music.hp.repository"/>
 		
 </beans>
 

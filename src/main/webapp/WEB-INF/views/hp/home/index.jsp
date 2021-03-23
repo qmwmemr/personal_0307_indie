@@ -19,13 +19,26 @@
 								<h1 data-animation="fadeInLeft" data-delay=".4s"
 									data-duration="2000ms">We Love Indie</h1>
 								<p data-animation="fadeInLeft" data-delay=".7s"
-									data-duration="2000ms">There are various Indie singers in
-									Korea.<br> We love them and they love us too.</p>
+									data-duration="2000ms">
+									<strong>인디</strong><br>
+									주류를 벗어나 자신만의 노래와 세계를 구축한 <br>
+									독창적인 가수 또는 음악
+									<br>
+										</p>
+								
+									
 								<!-- Hero-btn -->
 								<div class="hero__btn" data-animation="fadeInLeft"
 									data-delay=".8s" data-duration="2000ms">
-									<a href="/hp/pages/login" class="btn hero-btn">Login</a>
+									<c:if test="${login == null }">	
+									<a href="/hp/login" class="btn hero-btn">로그인</a>
+									</c:if>
+									<c:if test="${login != null }">	
+									<a href="/board/list" class="btn hero-btn">게시판</a>
+									</c:if>
 								</div>
+								
+								
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
@@ -47,13 +60,21 @@
 								<h1 data-animation="fadeInLeft" data-delay=".4s"
 									data-duration="2000ms">Do you like it, too?</h1>
 								<p data-animation="fadeInLeft" data-delay=".7s"
-									data-duration="2000ms">If you don't know about Indy,<br> We can
-									tell you!</p>
+									data-duration="2000ms">혹시 당신도 인디에 관심이 있다면<br> 
+										저회와 함께 즐겨보실래요?</p>
+								
 								<!-- Hero-btn -->
 								<div class="hero__btn" data-animation="fadeInLeft"
 									data-delay=".8s" data-duration="2000ms">
-									<a href="industries.html" class="btn hero-btn">Shop Now</a>
+									<c:if test="${login == null }">	
+									<a href="/hp/signUp" class="btn hero-btn">회원가입</a>
+									</c:if>
+									<c:if test="${login != null }">	
+									<a href="/board/random" class="btn hero-btn">랜덤음악</a>
+									</c:if>
 								</div>
+								
+								
 							</div>
 						</div>
 						<div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
@@ -75,11 +96,37 @@
 			<div class="row">
 				<div class="col-xl-12">
 					<div class="section-tittle mb-70">
-						<h2>Newest</h2>
+						<h2>Best Song</h2>
 					</div>
 				</div>
 			</div>
+			
+			
 			<div class="row">
+			<c:forEach var="b" items="${top3}">
+				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+					<div class="single-new-pro mb-30 text-center">
+						<div class="product-img">
+							<iframe width="360" height="450" src="${b.board_link }"
+													frameborder="0"
+													allow="accelerometer; autoplay; 
+													clipboard-write; encrypted-media; 
+													gyroscope; picture-in-picture"
+													allowfullscreen></iframe>
+						</div>
+						<div class="product-caption">
+							<h3>
+								<a href="<c:url value='/board/content/${b.board_no}'/>">${b.board_title}</a>
+							</h3>
+							<span>
+							<a href="<c:url value='/board/list?keyword=${b.board_singer}&condition=singer'/>" style="color:black">${b.board_singer}</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</c:forEach>				
+				
+				<!-- 원래 있던거 
 				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 					<div class="single-new-pro mb-30 text-center">
 						<div class="product-img">
@@ -93,33 +140,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-					<div class="single-new-pro mb-30 text-center">
-						<div class="product-img">
-							<img src="<c:url value='/img/gallery/서리.jpg'/>" alt="">
-						</div>
-						<div class="product-caption">
-							<h3>
-								<a href="product_details.html">Seori</a>
-							</h3>
-							<span>Running Through The Night</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-					<div class="single-new-pro mb-30 text-center">
-						<div class="product-img">
-							<img src="<c:url value='/img/gallery/백예린.jpg'/> " alt="">
-						</div>
-						<div class="product-caption">
-							<h3>
-								<a href="product_details.html">Yerin Baek</a>
-							</h3>
-							<span>Bye Bye My Blue</span>
-						</div>
-					</div>
-				</div>
-			</div>
+			-->
+			
 		</div>
 	</section>
 	<!--  New Product End -->
@@ -160,6 +182,8 @@
 		</div>
 	</div>
 	<!-- Gallery Area End -->
+	
+	
 	<!--? Popular Items Start -->
 	<div class="popular-items section-padding30">
 		<div class="container">
@@ -167,134 +191,48 @@
 			<div class="row justify-content-center">
 				<div class="col-xl-7 col-lg-8 col-md-10">
 					<div class="section-tittle mb-70 text-center">
-						<h2>Popular Items</h2>
-						<p>Consectetur adipiscing elit, sed do eiusmod tempor
-							incididunt ut labore et dolore magna aliqua. Quis ipsum
-							suspendisse ultrices gravida.</p>
+						<h2>Popular Songs</h2>
+						<p>회원님들이 추천한 곡들 중에서 인기가 많은 노래들입니다.</p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
+			
+			<c:forEach var="c" items="${top10}">
 				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
 					<div class="single-popular-items mb-50 text-center">
 						<div class="popular-img">
-							<img src="<c:url value='/img/gallery/popular1.png'/>" alt="">
+							<iframe width="480" height="505" src="${c.board_link }"
+													frameborder="0"
+													allow="accelerometer; autoplay; 
+													clipboard-write; encrypted-media; 
+													gyroscope; picture-in-picture"
+													allowfullscreen></iframe>
 							<div class="img-cap">
-								<span>Add to cart</span>
+								<span onclick="location.href='<c:url value="/board/content/${c.board_no}"/>'">
+									<a>게시글 보러가기</a>
+								</span>
 							</div>
 							<div class="favorit-items">
-								<span class="flaticon-heart"></span>
+								<span class="flaticon-heart">${c.board_cnt }</span>
 							</div>
 						</div>
 						<div class="popular-caption">
 							<h3>
-								<a href="product_details.html">Thermo Ball Etip Gloves</a>
+								<a>${c.board_title}</a>
 							</h3>
-							<span>$ 45,743</span>
+							<span>${c.board_singer}</span>
 						</div>
 					</div>
 				</div>
-				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-					<div class="single-popular-items mb-50 text-center">
-						<div class="popular-img">
-							<img src="<c:url value='/img/gallery/popular2.png'/>" alt="">
-							<div class="img-cap">
-								<span>Add to cart</span>
-							</div>
-							<div class="favorit-items">
-								<span class="flaticon-heart"></span>
-							</div>
-						</div>
-						<div class="popular-caption">
-							<h3>
-								<a href="product_details.html">Thermo Ball Etip Gloves</a>
-							</h3>
-							<span>$ 45,743</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-					<div class="single-popular-items mb-50 text-center">
-						<div class="popular-img">
-							<img src="<c:url value='/img/gallery/popular3.png'/>" alt="">
-							<div class="img-cap">
-								<span>Add to cart</span>
-							</div>
-							<div class="favorit-items">
-								<span class="flaticon-heart"></span>
-							</div>
-						</div>
-						<div class="popular-caption">
-							<h3>
-								<a href="product_details.html">Thermo Ball Etip Gloves</a>
-							</h3>
-							<span>$ 45,743</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-					<div class="single-popular-items mb-50 text-center">
-						<div class="popular-img">
-							<img src="<c:url value='/img/gallery/popular4.png'/>" alt="">
-							<div class="img-cap">
-								<span>Add to cart</span>
-							</div>
-							<div class="favorit-items">
-								<span class="flaticon-heart"></span>
-							</div>
-						</div>
-						<div class="popular-caption">
-							<h3>
-								<a href="product_details.html">Thermo Ball Etip Gloves</a>
-							</h3>
-							<span>$ 45,743</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-					<div class="single-popular-items mb-50 text-center">
-						<div class="popular-img">
-							<img src="<c:url value='/img/gallery/popular5.png'/>" alt="">
-							<div class="img-cap">
-								<span>Add to cart</span>
-							</div>
-							<div class="favorit-items">
-								<span class="flaticon-heart"></span>
-							</div>
-						</div>
-						<div class="popular-caption">
-							<h3>
-								<a href="product_details.html">Thermo Ball Etip Gloves</a>
-							</h3>
-							<span>$ 45,743</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-					<div class="single-popular-items mb-50 text-center">
-						<div class="popular-img">
-							<img src="<c:url value='/img/gallery/popular6.png'/>" alt="">
-							<div class="img-cap">
-								<span>Add to cart</span>
-							</div>
-							<div class="favorit-items">
-								<span class="flaticon-heart"></span>
-							</div>
-						</div>
-						<div class="popular-caption">
-							<h3>
-								<a href="product_details.html">Thermo Ball Etip Gloves</a>
-							</h3>
-							<span>$ 45,743</span>
-						</div>
-					</div>
-				</div>
-			</div>
+			</c:forEach>	
+
+	
 			<!-- Button -->
-			<div class="row justify-content-center">
+			<div class="row justify-content-center" align="center">
 				<div class="room-btn pt-70">
-					<a href="catagori.html" class="btn view-btn1">View More
-						Products</a>
+					<a href="catagori.html" class="btn view-btn1">
+					View More</a>
 				</div>
 			</div>
 		</div>
@@ -317,8 +255,7 @@
 			<!-- Arrow -->
 			<div class="thumb-content-box">
 				<div class="thumb-content">
-					<h3>Next Video</h3>
-					<a href="#"> <i class="flaticon-arrow"></i></a>
+					<h3>Square - 백예린</h3>
 				</div>
 			</div>
 		</div>

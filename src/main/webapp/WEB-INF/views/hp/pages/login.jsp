@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h2>Login</h2>
+                                <h2>로그인</h2>
                             </div>
                         </div>
                     </div>
@@ -26,10 +26,10 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="login_part_text text-center">
                             <div class="login_part_text_iner">
-                                <h2>New to our Shop?</h2>
-                                <p>There are advances being made in science and technology
-                                    everyday, and a good example of this is the</p>
-                                <a href="/hp/signUp" class="btn_3">Create an Account</a>
+                                <h2>New to our Page?</h2>
+                                <p>저희와 함께 한다면<br>
+                                더욱 더 즐거운 인디의 세계에 빠질수 있을거예요!</p>
+                                <a href="/hp/signUp" class="btn_3">회원가입</a>
                             </div>
                         </div>
                     </div>
@@ -53,12 +53,12 @@
                                     <div class="col-md-12 form-group">
                                         <div class="creat_account d-flex align-items-center">
                                             <input type="checkbox" id="auto-login" name="auto-login">
-                                            <label for="f-option">Remember me</label>
+                                            <label for="f-option">자동 로그인</label>
                                         </div>
                                         <button type="submit" value="submit" class="btn_3" id="login-btn">
-                                            log in
+                                            로그인
                                         </button>
-                                        <a class="lost_pass" href="#">forget password?</a>
+                                        <a class="lost_pass" href="#">비밀번호가 기억나지 않으신가요?</a>
                                     </div>
                             </div>
                         </div>

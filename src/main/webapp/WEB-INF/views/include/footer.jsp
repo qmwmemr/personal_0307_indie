@@ -13,7 +13,7 @@
 							<!-- logo -->
 							<div class="footer-logo">
 								<a href="home"><img
-									src="<c:url value='/img/logo/logo2.png'/>" alt=""></a>
+									src="<c:url value='/img/logo/logo5.png'/>" alt=""></a>
 							</div>
 							<div class="footer-tittle">
 								<div class="footer-pera">

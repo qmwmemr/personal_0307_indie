@@ -1,16 +1,38 @@
 package com.kjh.music.hp.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.kjh.music.board.model.BoardVO;
+import com.kjh.music.hp.service.IHpservice;
 
 @Controller
 @RequestMapping("/hp")
 public class HpController {
 
+	@Autowired
+	private IHpservice service;
+	
 	@GetMapping("/home")
-	public String home() {
+	public String home(Model model) {
 		System.out.println("/hp/home/index get");
+		
+		List<BoardVO> top3 = service.selectTop3();
+		System.out.println("top3 : " + top3);
+		model.addAttribute("top3",top3);
+		
+		
+		List<BoardVO> top10 = service.selectTop10();
+		System.out.println("top10 : " + top10);
+		model.addAttribute("top10",top10);
+		
+		
+		
 		return "/hp/home/index";
 	}
 	
