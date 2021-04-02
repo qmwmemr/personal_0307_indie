@@ -74,16 +74,15 @@
 									<li><a href="#">More</a>
 										<ul class="submenu">
 											<li><a href="/hp/about">소개</a></li>
-											<li><a href="/hp/shop">순위</a></li>
+											<li><a href="/hp/chart">순위</a></li>
 											<li><a href="/hp/contact">콘텍트</a></li>
+											<!-- 
 											<li><a href="/hp/shop"> Product list</a></li>
 											<li><a href="/hp/product_details"> Product Details</a></li>
+											 -->									
 										</ul></li>
 
-
-
-
-
+									<!-- 
 									<li><a href="/hp/blog">Blog</a>
 										<ul class="submenu">
 											<li><a href="/hp/blog">Blog</a></li>
@@ -97,8 +96,10 @@
 											<li><a href="/hp/elements">Element</a></li>
 											<li><a href="/hp/confirmation">Confirmation</a></li>
 											<li><a href="/hp/checkout">Product Checkout</a></li>
-										</ul></li>
-
+										</ul>
+									</li>
+									 -->
+									 
 								</ul>
 							</nav>
 						</div>
@@ -106,17 +107,25 @@
 						<div class="header-right">
 							<ul>
 								<li>
-									<div class="nav-search search-switch">
+									<a href="/board/list">
 										<span class="flaticon-search"></span>
-									</div>
+									</a>
 								</li>
 								<c:if test="${login == null }">
-									<li><a href="/hp/login"><span class="flaticon-user"></span></a></li>
+									<li>
+										<a href="/hp/login">
+										<span class="flaticon-user">
+										</span></a>
+									</li>
 								</c:if>
 								<c:if test="${login != null }">
-									<li><a href="/hp/myPage"><span class="flaticon-user"></span></a></li>
+									<li>
+										<a href="/hp/myPage">
+										<span class="flaticon-user"></span>
+										</a>
+									</li>
 								</c:if>
-								<li><a href="/board/list"><span class="flaticon-heart"></span></a></li>
+								<li><a href="/board/random"><span class="flaticon-heart"></span></a></li>
 							</ul>
 						</div>
 					</div>

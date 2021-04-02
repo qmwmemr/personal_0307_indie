@@ -2,6 +2,8 @@ package com.kjh.music.hp.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.kjh.music.board.model.BoardVO;
 import com.kjh.music.hp.service.IHpservice;
+import com.kjh.music.user.model.UserVO;
 
 @Controller
 @RequestMapping("/hp")
@@ -90,10 +93,13 @@ public class HpController {
 		return "/hp/pages/login";
 	}
 	
-	@GetMapping("/shop")
-	public String shop() {
-		System.out.println("/hp/shop/shop get");
-		return "/hp/shop/shop";
+	@GetMapping("/chart")
+	public String shop(Model model) {
+		System.out.println("/hp/chart/chart get");
+		
+		model.addAttribute("chart",service.chart());
+		
+		return "/hp/chart/chart";
 	}
 	
 	@GetMapping("/insert")
@@ -109,8 +115,19 @@ public class HpController {
 	}
 	
 	@GetMapping("/myPage")
-	public String myPage() {
+	public String myPage(HttpSession session, Model model) {
 		System.out.println("/hp/pages/myPage get");
+		
+		UserVO vo = (UserVO) session.getAttribute("login");
+		System.out.println("로그인정보: "+vo);
+
+		model.addAttribute("c",service.myArticleCount(vo.getUser_id()));
+		System.out.println("게시글 갯수: " + service.myArticleCount(vo.getUser_id()) );
+		model.addAttribute("l",service.myArticles(vo.getUser_id()));
+		System.out.println("목록: "+service.myArticles(vo.getUser_id()));
+		model.addAttribute("b",service.myBestArticle(vo.getUser_id()));
+		System.out.println("베스트: " +service.myBestArticle(vo.getUser_id()));
+		
 		return "hp/pages/myPage";
 	}
 	

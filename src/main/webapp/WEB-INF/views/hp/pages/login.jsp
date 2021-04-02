@@ -51,14 +51,22 @@
                                     </div>
                                     
                                     <div class="col-md-12 form-group">
+                                        
+                                        <!-- 자동로그인(오류: 로그아웃시 쿠키삭제가 안됨, 중간 중간 자동로그인이 안됨(페이지에 따라 다른것 같음)
                                         <div class="creat_account d-flex align-items-center">
                                             <input type="checkbox" id="auto-login" name="auto-login">
                                             <label for="f-option">자동 로그인</label>
                                         </div>
+                                        -->
+                                        
                                         <button type="submit" value="submit" class="btn_3" id="login-btn">
                                             로그인
                                         </button>
+                                        
+                                        <!-- 비밀번호 찾기(미구현) 
                                         <a class="lost_pass" href="#">비밀번호가 기억나지 않으신가요?</a>
+ 			                              -->
+ 			                                   	
                                     </div>
                             </div>
                         </div>

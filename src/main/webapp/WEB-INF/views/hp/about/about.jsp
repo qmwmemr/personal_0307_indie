@@ -26,17 +26,27 @@
                 <div class="row">
                     <div class="offset-xl-1 col-lg-8">
                         <div class="about-details-cap mb-50">
-                            <h4>Our Mission</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+                            <h4>My Mission</h4>
+                            <p>
+                            	개인적으로 인디음악을 매우 좋아하며 <br>
+                            	음악 특성상 홍보나 추천에 어려움이 있다는 것을 알기에 <br>
+                            	"서로 좋아하는 노래를 추천해보자!" 라는 취지를 담은 사이트입니다. <br>
                             </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
+                            <p>
+                            	Java 8, Jsp, Spring framework5 를 사용했습니다. 
+                            </p>
                         </div>
 
                         <div class="about-details-cap mb-50">
-                            <h4>Our Vision</h4>
-                            <p>Consectetur adipiscing elit, sued do eiusmod tempor ididunt udfgt labore et dolore magna aliqua. Quis ipsum suspendisces gravida. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus.
+                            <h4>My Vision</h4>
+                            <p>
+                            향후 더 추가하고 싶은 부분이 많습니다
+                            <p/>
+                            <p>
+                            1. 랜덤재생 페이지에서 영상이 끝나면 자동적으로 다음으로 넘어가게 하기. <br>
+                            2. 메인(홈)화면은 유튜브 영상창이 아니라 썸네일로 뜨게 하기. <br>
+                            3. 랭킹 페이지를 만들어서 한달주기로 자동 업데이트 되게 하기 등등..
                             </p>
-                            <p> Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan lacus. Risus commodo viverra sebfd dho eiusmod tempor maecenas accumsan.</p>
                         </div>
                     </div>
                 </div>
@@ -63,37 +73,7 @@
             </div>
         </div>
         <!-- Video Area End -->
-        <!--? Shop Method Start-->
-        <div class="shop-method-area">
-            <div class="container">
-                <div class="method-wrapper">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-package"></i>
-                                <h6>Free Shipping Method</h6>
-                                <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-unlock"></i>
-                                <h6>Secure Payment System</h6>
-                                <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                            </div>
-                        </div> 
-                        <div class="col-xl-4 col-lg-4 col-md-6">
-                            <div class="single-method mb-40">
-                                <i class="ti-reload"></i>
-                                <h6>Secure Payment System</h6>
-                                <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Shop Method End-->
+       
     </main>
    <jsp:include page="/WEB-INF/views/include/footer.jsp" />
 
