@@ -23,16 +23,7 @@
         <section class="login_part section_padding ">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="login_part_text text-center">
-                            <div class="login_part_text_iner">
-                                <h2>New to our Page?</h2>
-                                <p>저희와 함께 한다면<br>
-                                더욱 더 즐거운 인디의 세계에 빠질수 있을거예요!</p>
-                                <a href="/hp/signUp" class="btn_3">회원가입</a>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-lg-6 col-md-6">
                         <div class="login_part_form">
                             <div class="login_part_form_iner" style="padding-top:50px;" align="center">
@@ -68,6 +59,16 @@
  			                              -->
  			                                   	
                                     </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="login_part_text text-center">
+                            <div class="login_part_text_iner">
+                                <h2>New to our Page?</h2>
+                                <p>저희와 함께 한다면<br>
+                                더욱 더 즐거운 인디의 세계에 빠질수 있을거예요!</p>
+                                <a href="/hp/signUp" class="btn_3">회원가입</a>
                             </div>
                         </div>
                     </div>

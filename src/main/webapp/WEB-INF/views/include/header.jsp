@@ -74,7 +74,9 @@
 									<li><a href="#">More</a>
 										<ul class="submenu">
 											<li><a href="/hp/about">소개</a></li>
+											<!-- 
 											<li><a href="/hp/chart">순위</a></li>
+											 -->
 											<li><a href="/hp/contact">콘텍트</a></li>
 											<!-- 
 											<li><a href="/hp/shop"> Product list</a></li>

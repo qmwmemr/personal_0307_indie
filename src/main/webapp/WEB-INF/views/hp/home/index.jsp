@@ -94,8 +94,9 @@
 			<!-- Section tittle -->
 			<div class="row">
 				<div class="col-xl-12">
-					<div class="section-tittle mb-70">
+					<div class="section-tittle mb-70 text-center">
 						<h2>Best Song</h2>
+						<p>가장 많은 추천수를 받은 노래입니다</p>
 					</div>
 				</div>
 			</div>
@@ -145,50 +146,78 @@
 			</div>
 	</section>
 	<!--  New Product End -->
-	<!--? Gallery Area Start -->
-	<div class="gallery-area">
-		<div class="container-fluid p-0 fix">
-			<div class="row">
-				<div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
-					<div class="single-gallery mb-30">
-						<div class="gallery-img big-img"
-							style="background-image: url(<c:url value='/img/gallery/hans.jpg'/>);"></div>
+	
+	<!--? Watch Choice  Start-->
+		<div class="watch-area">
+			<div class="section-tittle mb-70 text-center">
+						<h2>Recommend Songs</h2>
+						<p>이번 주 추천하는 곡입니다</p>
 					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-					<div class="single-gallery mb-30">
-						<div class="gallery-img big-img"
-							style="background-image: url(<c:url value='/img/gallery/sofie.jpg'/>);"></div>
-					</div>
-				</div>
-				<div class="col-xl-3 col-lg-4 col-md-12">
-					<div class="row">
-						<div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
-							<div class="single-gallery mb-30">
-								<div class="gallery-img small-img"
-									style="background-image: url(<c:url value='/img/gallery/danie.jpg'/>);"></div>
-							</div>
-						</div>
-						<div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
-							<div class="single-gallery mb-30">
-								<div class="gallery-img small-img"
-									style="background-image: url(<c:url value='/img/gallery/gl.jpg'/>);"></div>
-							</div>
+			<div class="container">
+				<div
+					class="row align-items-center justify-content-between padding-130">
+					<div class="col-lg-5 col-md-6">
+						<div class="watch-details mb-40">
+							<h2>사랑하는 책</h2>
+							<h4 align="right">은교</h4>
+							<p>책 속의 세상 안에 들어가<br> 
+							그를 만나게 된다면 <br>
+							나는 무엇을 말할 수 가 있을까 <br>
+							<br>
+							눈조차 마주칠 용기가 <br>
+							내 안에 뿜어져 나올런지 <br>
+							그림조차 그려지지가 않아<br>
+							<br>
+							- 사랑하는 책 가사 中 -
+							</p>
+							
+							<a href="/board/content/13" class="btn">Listen Now</a>
 						</div>
 					</div>
+					<div class="col-lg-6 col-md-6 col-sm-10">
+						<div class="choice-watch-img mb-40">
+							<img src="<c:url value='/img/gallery/Eunkyo.jpg'/>" alt="">
+						</div>
+					</div>
 				</div>
-
+				<div class="row align-items-center justify-content-between">
+					<div class="col-lg-6 col-md-6 col-sm-10">
+						<div class="choice-watch-img mb-40">
+							<img src="<c:url value='/img/gallery/31.jpg'/>" alt="">
+						</div>
+					</div>
+					<div class="col-lg-5 col-md-6">
+						<div class="watch-details mb-40">
+							<h2>31</h2>
+							<h3 align="right"> 카더가든</h3>
+							<p>
+							휘어지는 가지마다 수놓았던<br>
+							검은 미련 같아라<br>
+							헤프던 맘들 모아 모두<br>
+							내 잘못이라고 말할 수만 있다면<br>
+							모질 게<br>
+							<br>
+							날 떠나도 떠나지 않는 사람들<br>
+							이렇게 간직하길 그래도<br>
+							시간 지나 나는 여기 있을 거야<br>
+							아무 일도 없었던 것처럼<br>
+							<br>
+							- 31 가사 中 -
+							</p>
+							<a href="/board/content/12" class="btn">Listen Now</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- Gallery Area End -->
+		<!-- Watch Choice  End-->
 
 
 	<!--? Popular Items Start -->
 	<div class="popular-items">
 		<div class="container">
 			<!-- Section tittle -->
-			<div class="row justify-content-center">
+			<div class="row justify-content-center" style="padding-top: 130px;">
 				<div class="col-xl-7 col-lg-8 col-md-10">
 					<div class="section-tittle mb-70 text-center">
 						<h2>Popular Songs</h2>
@@ -261,70 +290,47 @@
 			</div>
 		</div>
 		<!-- Video Area End -->
-		<!--? Watch Choice  Start-->
-		<div class="watch-area section-padding30">
-			<div class="section-tittle mb-70 text-center">
-						<h2>Recommend Songs</h2>
-						<p>이번 주 추천하는 곡입니다</p>
+		
+		
+		
+		<!--? Gallery Area Start -->
+	<div class="gallery-area" style="padding-top: 130px;">
+		<div class="container-fluid p-0 fix">
+			<div class="row">
+				<div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
+					<div class="single-gallery mb-30">
+						<div class="gallery-img big-img"
+							style="background-image: url(<c:url value='/img/gallery/hans.jpg'/>);"></div>
 					</div>
-			<div class="container">
-				<div
-					class="row align-items-center justify-content-between padding-130">
-					<div class="col-lg-5 col-md-6">
-						<div class="watch-details mb-40">
-							<h2>사랑하는 책</h2>
-							<h4 align="right">은교</h4>
-							<p>책 속의 세상 안에 들어가<br> 
-							그를 만나게 된다면 <br>
-							나는 무엇을 말할 수 가 있을까 <br>
-							<br>
-							눈조차 마주칠 용기가 <br>
-							내 안에 뿜어져 나올런지 <br>
-							그림조차 그려지지가 않아<br>
-							<br>
-							- 사랑하는 책 가사 中 -
-							</p>
-							
-							<a href="/board/content/13" class="btn">Listen Now</a>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+					<div class="single-gallery mb-30">
+						<div class="gallery-img big-img"
+							style="background-image: url(<c:url value='/img/gallery/sofie.jpg'/>);"></div>
+					</div>
+				</div>
+				<div class="col-xl-3 col-lg-4 col-md-12">
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
+							<div class="single-gallery mb-30">
+								<div class="gallery-img small-img"
+									style="background-image: url(<c:url value='/img/gallery/danie.jpg'/>);"></div>
+							</div>
 						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-10">
-						<div class="choice-watch-img mb-40">
-							<img src="<c:url value='/img/gallery/Eunkyo.jpg'/>" alt="">
+						<div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
+							<div class="single-gallery mb-30">
+								<div class="gallery-img small-img"
+									style="background-image: url(<c:url value='/img/gallery/gl.jpg'/>);"></div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="row align-items-center justify-content-between">
-					<div class="col-lg-6 col-md-6 col-sm-10">
-						<div class="choice-watch-img mb-40">
-							<img src="<c:url value='/img/gallery/31.jpg'/>" alt="">
-						</div>
-					</div>
-					<div class="col-lg-5 col-md-6">
-						<div class="watch-details mb-40">
-							<h2>31</h2>
-							<h3 align="right"> 카더가든</h3>
-							<p>
-							휘어지는 가지마다 수놓았던<br>
-							검은 미련 같아라<br>
-							헤프던 맘들 모아 모두<br>
-							내 잘못이라고 말할 수만 있다면<br>
-							모질 게<br>
-							<br>
-							날 떠나도 떠나지 않는 사람들<br>
-							이렇게 간직하길 그래도<br>
-							시간 지나 나는 여기 있을 거야<br>
-							아무 일도 없었던 것처럼<br>
-							<br>
-							- 31 가사 中 -
-							</p>
-							<a href="/board/content/1" class="btn">Listen Now</a>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
-		<!-- Watch Choice  End-->
+	</div>
+	<!-- Gallery Area End -->
+		
 		
 </main>
 <jsp:include page="/WEB-INF/views/include/footer.jsp" />
