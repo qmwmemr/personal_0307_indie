@@ -30,6 +30,7 @@
 	<mybatis-spring:scan base-package="com.kjh.music.board.repository"/>
 	<mybatis-spring:scan base-package="com.kjh.music.like.repository"/>
 	<mybatis-spring:scan base-package="com.kjh.music.hp.repository"/>
+	<mybatis-spring:scan base-package="com.kjh.music.kor.repository"/>
 		
 </beans>
 
