@@ -36,8 +36,10 @@
 		base-package="com.kjh.music" />
 
 	<!-- 인터셉터 빈 등록 -->
-	<beans:bean id="boardInterceptor" class="com.kjh.music.commons.interceptor.BoardInterceptor" />
-	<beans:bean id="autoLoginInterceptor" class="com.kjh.music.commons.interceptor.AutoLoginInterceptor"/> 
+	<beans:bean id="boardInterceptor"
+		class="com.kjh.music.commons.interceptor.BoardInterceptor" />
+	<beans:bean id="autoLoginInterceptor"
+		class="com.kjh.music.commons.interceptor.AutoLoginInterceptor" />
 	<interceptors>
 		<interceptor>
 			<mapping path="/board/postUp" />
@@ -50,8 +52,12 @@
 			<mapping path="/hp/home" />
 			<beans:ref bean="autoLoginInterceptor" />
 		</interceptor>
- 
+
 	</interceptors>
+
+	<!-- NaverLoginBO Class에 대한 Bean설정 추가 -->
+	<beans:bean id="naverLoginBO"
+		class="com.kjh.music.naver.NaverLoginBO" />
 
 
 </beans:beans>

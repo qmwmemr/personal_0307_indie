@@ -1,83 +1,94 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:include page="/WEB-INF/views/include/header.jsp" />
-    <main>
-        <!-- Hero Area Start-->
-        <div class="slider-area ">
-            <div class="single-slider slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap text-center">
-                                <h2>로그인</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Hero Area End-->
-        <!--================login_part Area =================-->
-        <section class="login_part section_padding ">
-            <div class="container">
-                <div class="row align-items-center">
-                    
-                    <div class="col-lg-6 col-md-6">
-                        <div class="login_part_form">
-                            <div class="login_part_form_iner" style="padding-top:50px;" align="center">
-                                <h3>Welcome Back ! <br>
-                                    Please Sign in now</h3>
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="text" class="form-control" id="user_id" name="user_id" value=""
-                                            placeholder="Id">
-                                    </div>
-                                    
-                                    <div class="col-md-12 form-group p_star">
-                                        <input type="password" class="form-control" id="user_pw" name="user_pw" value=""
-                                            placeholder="Password">
-                                    </div>
-                                    <div class="col-md-12 form-group p_star" id="check">
-                                    </div>
-                                    
-                                    <div class="col-md-12 form-group">
-                                        
-                                        <!-- 자동로그인(오류: 로그아웃시 쿠키삭제가 안됨, 중간 중간 자동로그인이 안됨(페이지에 따라 다른것 같음)
+<main>
+	<!-- Hero Area Start-->
+	<div class="slider-area ">
+		<div class="single-slider slider-height2 d-flex align-items-center">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="hero-cap text-center">
+							<h2>로그인</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Hero Area End-->
+	<!--================login_part Area =================-->
+	<section class="login_part section_padding ">
+		<div class="container">
+			<div class="row align-items-center">
+
+				<div class="col-lg-6 col-md-6">
+					<div class="login_part_form">
+						<div class="login_part_form_iner" style="padding-top: 50px;"
+							align="center">
+							<h3>
+								Welcome Back ! <br> Please Sign in now
+							</h3>
+							<div class="col-md-12 form-group p_star">
+								<input type="text" class="form-control" id="user_id"
+									name="user_id" value="" placeholder="Id">
+							</div>
+
+							<div class="col-md-12 form-group p_star">
+								<input type="password" class="form-control" id="user_pw"
+									name="user_pw" value="" placeholder="Password">
+							</div>
+							<div class="col-md-12 form-group p_star" id="check"></div>
+
+							<div class="col-md-12 form-group">
+
+								<!-- 자동로그인(오류: 로그아웃시 쿠키삭제가 안됨, 중간 중간 자동로그인이 안됨(페이지에 따라 다른것 같음)
                                         <div class="creat_account d-flex align-items-center">
                                             <input type="checkbox" id="auto-login" name="auto-login">
                                             <label for="f-option">자동 로그인</label>
                                         </div>
                                         -->
-                                        
-                                        <button type="submit" value="submit" class="btn_3" id="login-btn">
-                                            로그인
-                                        </button>
-                                        
-                                        <!-- 비밀번호 찾기(미구현) 
+
+								<button type="submit" value="submit" class="btn_3"
+									id="login-btn">로그인</button>
+
+								<!-- 비밀번호 찾기(미구현) 
                                         <a class="lost_pass" href="#">비밀번호가 기억나지 않으신가요?</a>
  			                              -->
- 			                                   	
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="login_part_text text-center">
-                            <div class="login_part_text_iner">
-                                <h2>New to our Page?</h2>
-                                <p>저희와 함께 한다면<br>
-                                더욱 더 즐거운 인디의 세계에 빠질수 있을거예요!</p>
-                                <a href="/hp/signUp" class="btn_3">회원가입</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================login_part end =================-->
-    </main>
-   <jsp:include page="/WEB-INF/views/include/footer.jsp" />
+
+								
+								<!-- 네이버 로그인 창으로 이동 -->
+								<div id="naver_id_login" style="text-align: center">
+									<a href="${url}"> <img width="223"
+										src="https://developers.naver.com/doc/review_201802/CK_bEFnWMeEBjXpQ5o8N_20180202_7aot50.png" /></a>
+								</div>
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="login_part_text text-center">
+						<div class="login_part_text_iner">
+							<h2>New to our Page?</h2>
+							<p>
+								저희와 함께 한다면<br> 더욱 더 즐거운 인디의 세계에 빠질수 있을거예요!
+							</p>
+							<a href="/hp/signUp" class="btn_3">회원가입</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================login_part end =================-->
+</main>
+<jsp:include page="/WEB-INF/views/include/footer.jsp" />
 
 </body>
 
@@ -204,5 +215,5 @@ $(function(){
 </script>
 
 
-    
+
 </html>

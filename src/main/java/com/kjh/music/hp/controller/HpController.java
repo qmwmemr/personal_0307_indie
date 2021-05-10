@@ -87,11 +87,22 @@ public class HpController {
 		return "/hp/pages/confirmation";
 	}
 	
-	@GetMapping("/login")
-	public String login() {
-		System.out.println("/hp/pages/login get");
-		return "/hp/pages/login";
-	}
+	
+//	@GetMapping("/login")
+//	public String login(HttpSession session) {
+//		
+//		if(session.getAttribute("login")!=null) {
+//			return "hp/pages/myPage";
+//		}else {
+//			System.out.println("/hp/pages/login get");
+//			return "/hp/pages/login";
+//		}
+//	
+//	}
+	
+
+	
+	
 	
 	@GetMapping("/chart")
 	public String shop(Model model) {
